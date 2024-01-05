@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas & Lu Wedding Invitation</title>
+    <link rel="stylesheet" href="wedding_style.css">
+    <link rel="shortcut icon" href="fav_icon.png">
+</head>
+<body>   
+  <div class="popup-container" id="popupContainer">
+    <div class="popup">
+      <div class="datos">  
+        <p>Caja de ahorro: XXXXX</p>
+        <p>CBU: XXXXXXX</p>
+        <p>Titular: XXXXXXX</p>
+        <p>CUIL: XXXXXXX</p><br>
+      </div>
+      <div class="botonCuenta"><button onclick="closePopup()">Cerrar</button></div>
+    </div>
+  </div>
+    <div class="container">
+        <div class="titulo"><h1>Casamiento de Gas y Lu</h1></div>
+        <div class="banner">
+            <div id="photoSpinner">
+                <div id="spinnerContainer">
+                  <div class="spinnerItem active"><img src="foto_wedding1.jpg" alt="Image 1"></div>
+                  <div class="spinnerItem"><img src="foto_wedding2.jpg" alt="Image 2"></div>
+                  <div class="spinnerItem" ><img src="foto_wedding3.jpg" alt="Image 3"></div>
+                </div>
+              </div>          
+        </div>
+        <div id="countdown">
+          <div class="countdown-value">
+            <div id="days"></div>
+            <div class="countdown-label">Días</div>
+          </div>
+          <div>  
+            <div id="hours"></div>
+            <div class="countdown-label">Horas</div>
+          </div>
+          <div>  
+            <div id="minutes"></div>
+            <div class="countdown-label">Minutos</div>
+          </div>
+          <div>
+            <div id="seconds"></div>
+            <div class="countdown-label">Segundos</div>
+          </div>
+        </div>
+        <div class="informacion">
+            <h3>Hola nos casamos!!!</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque sapiente accusantium qui ipsa doloribus amet unde eum facilis! Vero totam impedit libero nam at dolor enim quam accusantium itaque aspernatur?</p>
+        </div>
+        <div class="asistencia">
+          <div class="subtitutlos"><h2>Confirmación de asistencia</h2></div>
+          <p>Por favor ayudanos con la organización confirmando tu asistencia antes del 1 de Noviembre</p>
+          <div class="formAsistencia">
+            <form id="confirmationForm" action="/submit" method="post">
+              <div class="formGroup">
+                <label class="label" for="nombre">Nombre:</label>
+                <input class="input" type="text" id="nombre" name="nombre"><br><br>
+              </div>
+              <div class="formGroup">  
+                <label class="label" for="apellido">Apellido:</label>
+                <input class="input" type="text" id="apellido" name="apellido"><br><br>
+              </div>
+              <div class="formGroup">
+                <label class="label" for="restriccionAlimenticia">Restricción Alimentacia:</label>
+                <select class="dropdown" name="restriccionAlimenticia" id="restriccionAlimenticia">
+                  <option value="ninguna">Ninguna</option>
+                  <option value="vegano">Vegano</option>
+                  <option value="vegetariano">Vegetariano</option>
+                  <option value="celiaco">Celíaco</option>
+                  <option value="rompeHuevos">Rompe Huevos</option>
+                </select><br><br>
+              </div>
+              <div class="formGroup">
+              <label class="label" for="confirmacion">Confirmo Asistencia</label>
+                <select class="dropdown" name="confirmacion" id="confirmacion">
+                  <option value="si">ATR</option>
+                  <option value="no">Soy un gato</option>
+                </select><br><br>
+              </div>
+              <div class="formGroup">
+                <label class="label" for="comentarios">Comentarios o Preguntas:</label>
+                <input class="input" type="text" id="comentarios" name="comentarios"><br><br>
+              </div>
+              <div class="formGroup">
+                <input id="submit" type="submit" value="Guardar" class="botones">
+              </div>
+            </form><br><br>
+          </div>
+        </div>
+        <div class="playlist">
+          <div class="subtitutlos"><h2>Playlist</h2></div>
+          <p>Para que no falte ninguna canción, sumá todo lo que quieras a esta playlist.</p>
+          <div class="boton"><button class="botones">Playlist</button></div>
+        </div>
+        <div class="regalo">
+          <div class="subtitutlos"><h2>Regalo</h2></div>
+          <p>Si quieren pueden hacernos un regalo para la fiesta o nuestra luna de miel que será muuuuuuuy cara.
+          </p>
+          <div class="boton"><button class="botones" onclick="openPopup()">Datos</button></div>
+        </div>
+        <div class="ubicacion" id="ubicacion">
+          <div class="subtitutlos"><h2>Ubicación</h2></div>
+          <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13087.9686172087!2d-58.5148064!3d-34.9066464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcd7b188e63ef5%3A0x78dd6f57cb7ff6c9!2sPuesto%20la%20Vasca!5e0!3m2!1ses!2sar!4v1703810746970!5m2!1ses!2sar" width="600" height="450" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+          <div class="boton"> <button class="botones" id="showDirections">¿Cómo llego?</button></div>
+        </div>
+    </div>
+<script src="wedding_js.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+@font-face {
+  font-family: DisneyFont;
+  src: url(DisneyFont.ttf);
+}
+
+@font-face {
+  font-family: AlladinFont;
+  src: url(AlladinFont.ttf);
+}
+
+@font-face {
+font-family: LiloyStitchFont;
+src: url(LiloyStitchFont.ttf);
+}
+
+@font-face {
+font-family: MoanaFont;
+src: url(MoanaFont.ttf);
+}
+
+html {
+  background-image: url(Background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: DisneyFont;
+}
+
+h2 {
+font-family: MoanaFont;
+}
+
+.subtitutlos {
+display: grid;
+justify-content: center;
+}
+
+p {
+font-size: 3vw;
+}
+
+.datos > p {
+font-size: 20px;
+}
+
+.informacion > p {
+  font-family: AlladinFont;
+  font-size: 5vw;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 5fr 5fr 5fr;
+}
+
+.titulo {
+  justify-self: center;
+}
+
+#photoSpinner {
+  display: flex;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+#spinnerContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.spinnerItem {
+  flex: 0 0 100%;
+  display: none; /* Hide all spinner items by default */ 
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.spinnerItem.active {
+  display: block; /* Show the active spinner item */
+}
+
+.ubicacion {
+  justify-self: center;
+  display: grid;
+  justify-items: center;
+}
+
+.playlist {
+  display: grid;
+}
+
+.regalo {
+  display: grid;
+}
+
+.boton {
+  justify-self: center;
+}
+
+.botones {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  background-color: #db07d1; /* Set the background color */
+  color: #fff; /* Set the text color */
+  border-radius: 5px; /* Add rounded corners */
+  border: 2px solid #c0158d; /* Add a border color */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.botones:hover {
+  background-color: #f13ee2; /* Change the background color on hover */
+}
+
+#countdown {
+  font-size: 8vw;
+  font-weight: bold;
+  background-color: #a890f0; /* Dark Purple Background */
+  padding: 20px;
+  border-radius: 20px;
+  display: grid;
+/*     flex-direction: column; */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 15vw;
+}
+
+
+.countdown-label {
+  font-size: 2vw;
+  margin-top: 10px;
+  color: #fff;
+}
+
+#expired-message {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #f00;
+  margin-top: 20px;
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.datos {
+border-bottom: 2px solid slategray;
+}
+
+.botonCuenta {
+  justify-content: right;
+  justify-items: right;
+  justify-self: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.asistencia {
+display: grid;
+}
+
+.formAsistencia {
+justify-self: center;
+width: 33%;
+}
+
+.formGroup {
+display: grid;
+}
+
+label {
+font-family: LiloyStitchFont;
+}
+
+#submit {
+width: 50%;
+justify-self: center;
+}
+
+@media only screen and (min-width: 1000px) {
+  #countdown {
+    font-size: 50px;
+    font-weight: bold;
+    background-color: #a890f0; 
+    padding: 20px 200px;
+    border-radius: 20px;
+    display: grid;
+/*     flex-direction: column; */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+  }
+  
+  .countdown-label {
+    font-size: 25px;
+    margin-top: 10px;
+    color: #fff;
+  }
+
+  #expired-message {
+    font-size: 25px;
+    font-weight: bold;
+    color: #f00;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 30px;
+}
+  .informacion > p {
+    font-size: 40px;
+  }
+}
